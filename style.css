@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-main: #ffffff;
+    --text-muted: #e0e0e0;
+    --accent: #ff007f;
+    --accent-2: #7b2cbf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f0c29;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Background floating blobs */
+.background-shape {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.shape-1 {
+    top: -100px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: var(--accent-2);
+    opacity: 0.6;
+}
+
+.shape-2 {
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: var(--accent);
+    opacity: 0.5;
+}
+
+
+/* Glass Sections */
+.glass-section {
+    width: 84%;
+    margin: 80px auto;
+    padding: 40px;
+    background: var(--glass-bg);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.hero-text {
+    color: #ffffff;
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin: 20px 0;
+    color: var(--text-muted);
+}
+
+.hero-img img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--glass-border);
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 25px 0;
+}
+
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+/* Buttons */
+.btn-main,
+.btn-secondary {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.btn-main {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* Skills Tags */
+.skills-wrap {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--accent-2);
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    place-items: center;
+}
+
+.card,
+.cert-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+/* New Project Layout */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    transition: 0.3s;
+}
+
+.project-row:hover {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+/* Zigzag Pattern */
+.project-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.project-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 12px;
+}
+
+.project-row:hover .project-image img {
+    transform: scale(1.05);
+    /* Zoom effect on hover */
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.cert-img {
+    display: none;
+    /* Deprecated */
+}
+
+/* Cert card specific overrides if needed (kept from previous steps) */
+.cert-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.cert-card img {
+    max-width: 100%;
+    height: 200px;
+    /* Adjusted to variable height if needed, but keeping consistently reasonable max */
+    border-radius: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover img {
+    transform: scale(1.05);
+}
+
+.card:hover,
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact Form */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.info-item i {
+    color: var(--accent);
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: white;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+}
+
+button {
+    padding: 15px;
+    background: var(--accent);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d6006c;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.first {
+    padding-top: 30px;
+    color: white;
+}
+
+.second {
+    padding-top: 5px;
+    color: #d6006c;
+}
+
+/* Laptop/Small Desktop Breakpoint */
+@media (max-width: 1024px) {
+    .glass-section {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet & Mobile Breakpoint (Main Responsive Logic) */
+@media (max-width: 768px) {
+    .glass-section {
+        width: 95%;
+        padding: 20px;
+        margin: 40px auto;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        min-height: auto;
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Full Screen Mobile Menu */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        /* Move completely off-screen */
+        height: 100vh;
+        width: 100vw;
+        /* Force 100% Viewport Width */
+        background: rgba(0, 0, 0, 0.98);
+        /* Less transparent for better focus */
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+        /* Smooth slide */
+        z-index: 100;
+        /* High z-index to cover everything */
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 101;
+        /* Must be higher than nav-links (100) to remain clickable */
+        position: relative;
+        /* Ensure it stays on top */
+    }
+
+    .hero-img img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+
+    /* Project Section Stack adjustment */
+    .project-row,
+    .project-row:nth-child(even) {
+        flex-direction: column-reverse;
+        /* Image on top usually looks best, but let's see. If HTML is text then image, column-reverse puts image on top. Wait.
+        Standard HTML: [Text] [Image].
+        Row: Text Left, Image Right.
+        Row Reverse: Image Left, Text Right.
+        Column: Text Top, Image Bottom.
+        Column-Reverse: Image Top, Text Bottom.
+        Let's try Standard Column-Reverse to have Image Top for ALL cards. */
+        flex-direction: column-reverse;
+        text-align: center;
+        /* Center align text for mobile */
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .project-content h3 {
+        margin-top: 15px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+}
+
+/* Small Mobile Breakpoint */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .glass-section {
+        padding: 15px;
+        width: 98%;
+    }
+
+    .btn-main,
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Modal Styles */
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #94054c;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #1e293b;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: center;
+    color: #e2e8f0;
+    font-family: 'Poppins', sans-serif;
+    animation: slideIn 0.3s;
+}
+
+.close-btn {
+    color: #94a3b8;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    transition: 0.2s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.push-pin {
+    font-size: 3rem;
+    color: #f43f5e;
+    transform: rotate(45deg);
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+} */
+
+/* Disclaimer Modal (Bootstrap styled – Pink version) */
+/* Bootstrap Disclaimer Modal – Pink Version */
+/* FORCE PINK DISCLAIMER MODAL */
+.modal-content.disclaimer-modal {
+    background: #94054c !important;
+    border-radius: 18px;
+    border: none;
+    color: white;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* Text */
+.modal-content.disclaimer-modal p {
+    color: #f6c7db;
+    line-height: 1.6;
+}
+
+/* Push pin icon */
+.modal-content.disclaimer-modal .push-pin {
+    font-size: 3rem;
+    color: #ff4d94;
+    transform: rotate(45deg);
+}
+
+/* Dark blurred background */
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
