@@ -705,7 +705,11 @@ footer {
 }
 
 .loader-content h1 {
+<<<<<<< HEAD
     font-size: 2rem;
+=======
+    font-size: 3rem;
+>>>>>>> c30e5da8163ee82a85bfde99828a5cbf74d621d5
     font-weight: 700;
     color: white;
     letter-spacing: 2px;
