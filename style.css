@@ -95,6 +95,39 @@ body {
     margin: 10px 0;
 }
 
+
+.typing-text {
+    border-right: 3px solid var(--accent);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    max-width: fit-content;
+
+    animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent)
+    }
+}
+
 .hero-text {
     color: white;
 }
@@ -533,6 +566,20 @@ footer {
         /* Prevent child elements from breaking out */
     }
 
+    /* Fix for Typing Text Overflow */
+    .typing-text {
+        font-size: 1rem;
+        white-space: normal;
+        /* Allow text to wrap */
+        border-right: none;
+        /* Remove cursor effect matching wrapping */
+        animation: none;
+        /* Disable typing animation as it requires single line */
+        width: 100%;
+        /* Full width */
+        text-align: center;
+        /* Center align for better look */
+    }
 
     .btn-main,
     .btn-secondary {
@@ -707,6 +754,6 @@ body.loading {
     overflow: hidden;
 }
 
-body.loading>*:not(#preloader) {
+body.loading:not(#preloader) {
     display: none;
 }
