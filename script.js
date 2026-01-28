@@ -1,4 +1,4 @@
-// 1. Navbar Scroll Effect
+// Navbar Scroll Effect
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
@@ -8,7 +8,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// 1.5 Toggle Mobile Menu
+// Toggle Mobile Menu
 
 document.querySelectorAll('.nav-close').forEach(link => {
     link.addEventListener('click', () => {
@@ -20,39 +20,7 @@ document.querySelectorAll('.nav-close').forEach(link => {
     });
 });
 
-// 2. Handle Contact Form
-// document.getElementById('contactForm').addEventListener('submit', async (e) => {
-//     e.preventDefault();
-//     const statusMsg = document.getElementById('statusMsg');
-//     statusMsg.innerText = "Sending message...";
-//     statusMsg.style.color = "white";
 
-//     const formData = {
-//         name: document.getElementById('name').value,
-//         email: document.getElementById('email').value,
-//         message: document.getElementById('message').value
-//     };
-
-//     try {
-//         const response = await fetch('/api/contact', {
-//             method: 'POST',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify(formData)
-//         });
-
-//         if (response.ok) {
-//             statusMsg.innerText = "Thanks! I'll contact you soon.";
-//             statusMsg.style.color = "#00ff88"; // Green
-//             document.getElementById('contactForm').reset();
-//         } else {
-//             statusMsg.innerText = "Something went wrong.";
-//             statusMsg.style.color = "#ff4d4d"; // Red
-//         }
-//     } catch (err) {
-//         console.error(err);
-//         statusMsg.innerText = "Server error.";
-//     }
-// });
 
 // Open Disclaimer Modal (Bootstrap way)
 document.getElementById('termsBtn').addEventListener('click', () => {
@@ -88,3 +56,28 @@ if (viewMoreBtn) {
 }
 
 
+
+// ================= PRELOADER =================
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+
+        // Slide up effect
+        preloader.classList.add("slide-up");
+
+        setTimeout(() => {
+            preloader.style.display = "none";
+
+            // Reveal site
+            document.body.classList.add("loaded");
+
+            // Start animations
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+
+        }, 1000);
+    }, 2500); // Wait a moment for smooth reveal
+});
