@@ -14,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         body {
@@ -69,26 +70,35 @@
     </style>
 
 <body>
+
+
+    <div id="preloader">
+        <div class="loader-content">
+            <h1>CHINTAN<span>VARMA</span></h1>
+            <p>Portfolio Loading...</p>
+            <div class="loader-bar">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
     <div class="background-shape shape-1"></div>
     <div class="background-shape shape-2"></div>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top" data-aos="fade-down" data-aos-duration="1000">
         <div class="container-fluid px-5">
 
-            <!-- Logo -->
             <a class="navbar-brand logo" href="#"><span style="color: #ffffff;">
                     CHINTAN</span><span>VARMA</span>
             </a>
 
-            <!-- Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Links -->
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto gap-lg-4 text-center">
                     <li class="nav-item">
@@ -113,21 +123,20 @@
         </div>
     </nav>
 
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <section id="home" class="glass-section hero">
         <div class="hero-content">
-            <h3>Hello, I am</h3>
-            <h1 class="hero-text">CHINTAN VARMA</h1>
-            <h2 class="typing-text hero-text">Building the Web, Back-to-Front</h2>
+            <h3 data-aos="fade-up" data-aos-delay="100">Hello, I am</h3>
+            <h1 class="hero-text" data-aos="fade-up" data-aos-delay="200" style="color: white;">CHINTAN VARMA</h1>
+            <h2 class="typing-text hero-text" data-aos="fade-up" data-aos-delay="300">Building the Web, Back-to-Front
+            </h2>
             <p>Specializing in Frontend Development with a strong Backend foundation, I build intuitive and robust web
                 applications. Refined through virtual internships and self-learning, my work seamlessly merges stunning
                 visuals with practical logic.</p>
 
-            <div class="social-icons">
+            <div class="social-icons" data-aos="zoom-in" data-aos-delay="400">
                 <a href="https://www.instagram.com/varma_chintan/?next=&hl=en" target="_blank" class="social-btn"><i
                         class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/varma-chintan-997395306/" target="_blank" class="social-btn"><i
@@ -145,7 +154,7 @@
                     class="fas fa-download"></i></a>
         </div>
         <div class="hero-img">
-            <img src="/certificate/profile.jpeg" alt="Profile Photo">
+            <img src="/certificate/profile.jpeg" alt="Profile Photo" data-aos="zoom-in" data-aos-duration="1200">
         </div>
     </section>
 
@@ -191,7 +200,7 @@
         <h2 class="section-title">My Projects</h2>
         <div class="projects-container">
 
-            <div class="project-row">
+            <div class="project-row" data-aos="fade-up">
                 <div class="project-content">
                     <h3>Netflix-clone</h3>
                     <p>Responsive Netflix landing page clone built with pure HTML and CSS. Fully responsive for mobile,
@@ -204,7 +213,7 @@
                 </div>
             </div>
 
-            <div class="project-row">
+            <div class="project-row" data-aos="fade-up">
                 <div class="project-content">
                     <h3>Task-Management-System</h3>
                     <p>A dynamic Task Manager built with PHP & MySQL featuring a modern Glassmorphism UI. It includes
@@ -219,7 +228,7 @@
                 </div>
             </div>
 
-            <div class="project-row">
+            <div class="project-row" data-aos="fade-up">
                 <div class="project-content">
                     <h3>Dynamic-registration-form</h3>
                     <p>This project is a dynamic web application designed to manage travel registrations. It features a
@@ -240,7 +249,7 @@
 
     <section id="certificates" class="glass-section">
         <h2 class="section-title">Certifications</h2>
-        <div class="cards-grid">
+        <div class="cards-grid" data-aos="zoom-in-up">
             <div class="cert-card">
                 <img src="/certificate/c-1.jpg" alt="Certification 1">
             </div>
@@ -289,7 +298,7 @@
 
     <section id="contact" class="glass-section">
         <h2 class="section-title">Contact Me</h2>
-        <div class="contact-wrapper">
+        <div class="contact-wrapper" data-aos="fade-up">
             <div class="contact-info">
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -305,7 +314,7 @@
                 <input type="text" id="name" name="Name" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
                 <textarea id="message" rows="4" name="msg" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit" style="border-radius: 30px;">Send Message</button>
                 <p id="statusMsg"></p>
             </form>
         </div>
@@ -343,6 +352,7 @@
     </div>
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 
